@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   
+   <typeAliases>
+   <typeAlias type="cn.hnist.ssm.qqzone.pojo.User" alias="User"/>
+   <typeAlias type="cn.hnist.ssm.qqzone.pojo.Topic" alias="Topic"/>
+   <typeAlias type="cn.hnist.ssm.qqzone.pojo.Reply" alias="Reply"/>
+   <typeAlias type="cn.hnist.ssm.qqzone.pojo.HostReply" alias="HostReply"/>
+   </typeAliases>
+   
+   <mappers>
+   <mapper resource="resource/UserMapper.xml"/>
+   <mapper resource="resource/TopicMapper.xml"/>
+   <mapper resource="resource/ReplyMapper.xml"/>
+   <mapper resource="resource/HostReplyMapper.xml"/>
+   
+   </mappers>
+	
+</configuration>

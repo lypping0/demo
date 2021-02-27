@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.hnist.ssm.qqzone.dao.TopicDAO">
+     <select id="getTopicList" parameterType="int" resultType="Topic">
+        select id,title,content, topic_date as topicDate ,userId from t_topic where userId=#{value}
+     </select>
+     <select id="getTopic" parameterType="int" resultType="Topic">
+        select id,title,content, topic_date as topicDate ,userId from t_topic where id=#{value}
+     </select>
+     <insert id="addTopic" parameterType="Topic">
+          insert into t_topic value(null,#{title},#{content},#{topicDate},#{userId})
+     </insert>
+     <delete id="delTopic" parameterType="int">
+         delete from t_topic where id=#{value}
+     </delete>
+</mapper>

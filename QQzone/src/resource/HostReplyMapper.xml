@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.hnist.ssm.qqzone.dao.HostReplyDAO">
+   
+    <insert id="addHostReply" parameterType="HostReply">
+      insert into t_host_reply value(null,#{content},#{HostReplyDate},#{userId},#{replyId})
+    </insert>
+    <delete id="delHostReply" parameterType="int">
+     delete from t_host_reply where id=#{value}
+    </delete>
+    <select id="getHostReplyByReplyId" parameterType="int" resultType="HostReply">
+     select * from t_host_reply where reply_id=#{value}
+    </select>
+</mapper>
